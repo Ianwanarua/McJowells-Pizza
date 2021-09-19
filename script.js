@@ -9,9 +9,9 @@ function Order(type, size, crust, topping) {
 //get crust price
 Order.prototype.getCrust = function () {
     if (this.crust === 0) {
-        return 150
+        return 50
     } else if (this.crust === 1) {
-        return 150
+        return 100
     } else if (this.crust === 2) {
         return 150
     }
@@ -20,13 +20,13 @@ Order.prototype.getCrust = function () {
 //get topping price
 Order.prototype.getTopping = function () {
     if (this.topping === 0) {
-        return 100
-    } else if (this.topping === 1) {
         return 50
-    } else if (this.topping === 2) {
-        return 200
-    } else if (this.topping === 3) {
+    } else if (this.topping === 1) {
         return 100
+    } else if (this.topping === 2) {
+        return 150
+    } else if (this.topping === 3) {
+        return 200
     }
 }
 
@@ -35,8 +35,6 @@ Order.prototype.getTopping = function () {
 Order.prototype.getSize = function () {
 
     var count = $("#topping :selected").length;
-    // alert(count);
-
     if (this.type == 0) {
         if (count === 0) {
             return 600
@@ -45,7 +43,8 @@ Order.prototype.getSize = function () {
         else {
             return 1500
         }
-    } else if (this.type == 1) {
+    }
+   else if (this.type == 1) {
         if (count === 0) {
             return 300
         } else if (count === 1)
@@ -53,7 +52,8 @@ Order.prototype.getSize = function () {
         else {
             return 2000
         }
-    } else if (this.type == 2) {
+    } 
+    else if (this.type == 2) {
         if (count === 0) {
             return 500
         } else if (count === 1)
@@ -61,7 +61,8 @@ Order.prototype.getSize = function () {
         else {
             return 2500
         }
-    } else if (this.type == 3) {
+    } 
+    else if (this.type == 3) {
         if (count === 0) {
             return 600
         } else if (count === 1)
@@ -69,7 +70,8 @@ Order.prototype.getSize = function () {
         else {
             return 2500
         }
-    } else if (this.type == 4) {
+    } 
+    else if (this.type == 4) {
         if (count === 0) {
             return 500
         } else if (count === 1)
@@ -77,7 +79,8 @@ Order.prototype.getSize = function () {
         else {
             return 2000
         }
-    } else if (this.type == 5) {
+    } 
+    else if (this.type == 5) {
         if (count === 0) {
             return 400
         } else if (count === 1)
@@ -85,7 +88,8 @@ Order.prototype.getSize = function () {
         else {
             return 2200
         }
-    } else {
+    } 
+    else {
         return false;
     }
 }
