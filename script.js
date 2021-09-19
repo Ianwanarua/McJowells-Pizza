@@ -38,58 +38,60 @@ Order.prototype.getTopping = function () {
 Order.prototype.getSize = function () {
 
     var count = $("#topping :selected").length;
+    //small pizza 350
     if (this.type == 0) {
         if (count === 0) {
-            return 600
-        } else if (count === 1)
-            return 1000
+            return 400
+        }
+         else if (count === 1)
+            return 450
         else {
-            return 1500
+            return 550
         }
     }
    else if (this.type == 1) {
         if (count === 0) {
-            return 300
+            return 700
         } else if (count === 1)
             return 800
         else {
-            return 2000
+            return 1500
         }
     } 
     else if (this.type == 2) {
         if (count === 0) {
-            return 500
+            return 800
         } else if (count === 1)
             return 1000
         else {
-            return 2500
+            return 1800
         }
     } 
     else if (this.type == 3) {
         if (count === 0) {
-            return 600
+            return 900
         } else if (count === 1)
             return 1500
         else {
-            return 2500
+            return 2000
         }
-    } 
+    }
     else if (this.type == 4) {
         if (count === 0) {
             return 500
         } else if (count === 1)
             return 950
         else {
-            return 2000
+            return 2500
         }
     } 
     else if (this.type == 5) {
         if (count === 0) {
             return 400
         } else if (count === 1)
-            return 850
+            return 1000
         else {
-            return 2200
+            return 2400
         }
     } 
     else {
@@ -100,27 +102,28 @@ Order.prototype.getSize = function () {
 //user Interface
 //calculate total cost 
 function fullBill() {
-    var sum = 0;
+    var areaLocation = $('#location').text;
+    var add = 0;
     $(".total_pizza").each(function () {
         var value = $(this).text();
         if (!isNaN(value) && value.length != 0) {
-            sum += parseFloat(value);
+            add += parseFloat(value);
         }
     });
     if (document.getElementById('yes').checked) {
-        var result = "Your order is Ksh. " + sum + " with a delivery fee of Ksh. 200 ";
-        var orderBill = sum + 200;
+        var result = "Your order is Ksh. " + add + " with a delivery fee of Ksh. 100 ";
+        var orderBill = add + 100;
         var total = "Total: Ksh. " + orderBill + " .00";
         $('#result').text(result);
         $('#totalCost').text(total);
 
         swal({
-            title: "Your order will be delivered to your Location at a fee of 200 shillings",
+            title: "Your order will be delivered to " + areaLocation + " at kshs 100. ",
             icon: "success",
         })
 
     } else {
-        var total = "Total: Ksh. " + sum + " .00";
+        var total = "Total: Ksh. " + add + " .00";
         $('#totalCost').text(total)
     }
 }
@@ -128,7 +131,7 @@ function fullBill() {
 //checkout button
 function checkout() {
     swal({
-        title: "Your order has been placed successfully." + "\r\n" + "Thank You for shopping with Us",
+        title: "Your order has been taken." + "\r\n" + "Thank You for choosing Mcjowells Pizza",
         icon: "success",
     }).then((value) => {
         location.reload();
