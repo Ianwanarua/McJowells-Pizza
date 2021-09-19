@@ -28,6 +28,9 @@ Order.prototype.getTopping = function () {
     } else if (this.topping === 3) {
         return 200
     }
+    else if (this.topping ===4) {
+        return 250
+    }
 }
 
 
