@@ -9,18 +9,18 @@ function Order(type, size, crust, topping) {
 //get crust price
 Order.prototype.getCrust = function () {
     if (this.crust === 0) {
-        return 100
+        return 150
     } else if (this.crust === 1) {
-        return 50
+        return 150
     } else if (this.crust === 2) {
-        return 200
+        return 150
     }
 }
 
 //get topping price
 Order.prototype.getTopping = function () {
     if (this.topping === 0) {
-        return 300
+        return 100
     } else if (this.topping === 1) {
         return 50
     } else if (this.topping === 2) {
