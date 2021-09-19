@@ -1,0 +1,248 @@
+body{
+	margin:0;
+	padding:0;
+	background:#fff;
+	font-family: 'Raleway',sans-serif;
+	color: #fff;
+}
+.banner{
+	height: 100vh;
+	width: 100%;
+	background:url('assets/overlay.png'),url('assets/image.jpg');
+	background-position: center 40%;
+	background-size:cover;
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
+}
+.banner .navbar{
+	margin-top:4%;
+}
+.banner .navbar-brand{
+	color: #fff;
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 10%;
+}
+.banner .nav{
+	margin-right:10%; 
+}
+.banner .nav li a{
+	color:#aaa;
+	font-size: 1.2em;
+}
+.banner .nav li a:hover{
+    color: white;
+}
+.banner .info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.banner .info h1{
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.banner .info p{
+	font-size: 2em;
+	font-weight: 500;
+	color: #aaa;
+	letter-spacing: 2px;
+}
+.banner .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	color: #fff;
+	background: #e91d43;
+	padding:10px 20px; 
+	font-size: 2em;
+	font-weight: 600;
+}
+.banner .info a:hover{
+	background: #e91e63;
+}
+/*ICONS SECTION*/
+.abt{
+    background: url();
+    color: black;
+    margin-top: 1em;
+    font-size: 20px;
+}
+.icon img{
+    height: 100px;
+   
+}
+.icon h4{
+    font-weight: 600;
+}
+/*ORDER SECTION*/
+#order_pizza {
+    padding: 2%;
+}
+#order_pizza h2{
+    font-size: 35px;
+    font-weight: 600;
+}
+#order_now {
+    background: url('assets/form.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    background-color: rgba(19, 150, 150, 0.5);
+    font-size: 18px;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.orderText {
+    background-color: navy;
+    color: black;
+    padding: 20px;
+}
+
+.form{
+    padding: 4%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 20px;
+   background-color: rgba(102, 164, 245, 0.5);
+}
+.displayOrder {
+    padding: 4%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+label {
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.location {
+    display: none;
+    align-items: center;
+
+}
+th {
+    border: 1px solid rgb(15, 86, 219);
+}
+td{
+    color:white;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+#bill {
+    height: 30px;
+    font-size: X-large;
+    font-weight: 700;
+
+}
+ 
+.form2{
+  margin-left: 25%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .form2 {
+        margin-left: 0;
+    }
+  }
+  /*FOOTER SECTION*/
+  #footer-body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fcfcfc;
+    color: black;
+}
+footer{
+    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 20px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+    
+}
+.socials a{
+    text-decoration: none;
+    color: black;
+}
+.socials a i{
+    font-size: 2em;
+    transition: 0.2s;
+   
+
+}
+.socials a:hover i{
+    transform: translateY(-20px);
+}
+
+.footer-bottom{
+    background: #000;
+    
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .5;
+    font-weight: 200;
+}
