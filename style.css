@@ -30,7 +30,7 @@ body{
 	font-size: 1.2em;
 }
 .banner .nav li a:hover{
-    color: white;
+    color: #e91e63;
 }
 .banner .info{
 	margin-top:15%;
@@ -147,12 +147,17 @@ td{
 
 .btn {
     margin-top: 20px;
+    background: #e91e63;
+    text-transform: uppercase;
+    
 }
 
 #displayTotal {
     height: 30px;
-    font-size: X-large;
+    font-size: 28px;
     font-weight: 700;
+    text-align: center;
+    color: rgb(3, 3, 3);
 
 }
  
