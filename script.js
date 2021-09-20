@@ -184,8 +184,7 @@ $(document).ready(function () {
             //price per order
             var pizzaBill = (newOrder.getSize() + newOrder.getCrust() + newOrder.getTopping()) * quantity;
 
-            //append data to table
-            $('.form_table').show();
+            //Table display of the order inputted
             $(".table tbody:last").append("<tr>" +
                 "<td>" + $('#type option:selected').text() + "</td>" +
                 "<td>" + $('#crust option:selected').text() + "</td>" +
