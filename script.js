@@ -1,7 +1,8 @@
+//Declaration
 let type;
 let crust;
 let topping;
-
+//constructor
 function McPizza(type, size, crust, topping) {
     this.type = type;
     this.size = size;
@@ -9,7 +10,7 @@ function McPizza(type, size, crust, topping) {
     this.topping = topping;
 }
 
-//get crust price
+//Crust prize
 McPizza.prototype.getCrust = function () {
     if (this.crust === 0) {
         return 50
@@ -20,7 +21,7 @@ McPizza.prototype.getCrust = function () {
     }
 }
 
-//get topping price
+//Topping price
 McPizza.prototype.getTopping = function () {
     var count = $("#topping :selected").length;
     if (this.topping === 0) {
@@ -38,11 +39,13 @@ McPizza.prototype.getTopping = function () {
 }
 
 
-//get size price
+//Pizza size price
 McPizza.prototype.getSize = function () {
 
-   var count = $("#topping :selected").length;
-    //
+   var count = $("#topping :selected").length;//allows for multiple selecting
+
+   //Calculating Pizza by size and type
+   //Pizza 1
     if (this.type == 0) {
         if (this.size === 0) {
             return 400
@@ -52,7 +55,7 @@ McPizza.prototype.getSize = function () {
         else {
             return 550
         }
-    }
+    }//pizza 2
    else if (this.type == 1) {
         if (this.size === 0) {
             return 700
@@ -61,7 +64,7 @@ McPizza.prototype.getSize = function () {
         else {
             return 1500
         }
-    } 
+    } //3
     else if (this.type == 2) {
         if (this.size === 0) {
             return 800
@@ -70,7 +73,7 @@ McPizza.prototype.getSize = function () {
         else {
             return 1800
         }
-    } 
+    } //4
     else if (this.type == 3) {
         if (this.size === 0) {
             return 900
@@ -79,7 +82,7 @@ McPizza.prototype.getSize = function () {
         else {
             return 2000
         }
-    }
+    }//5
     else if (this.type == 4) {
         if (this.size === 0) {
             return 500
@@ -88,7 +91,7 @@ McPizza.prototype.getSize = function () {
         else {
             return 2500
         }
-    } 
+    } //6
     else if (this.type == 5) {
         if (this.size === 0) {
             return 400
@@ -103,8 +106,7 @@ McPizza.prototype.getSize = function () {
     }
 }
 
-//user Interface
-//calculate total cost 
+//Calculating the total cost 
 function fullBill() {
     var areaLocation = document.getElementById("myArea").value;
         var add = 0;
@@ -122,8 +124,7 @@ function fullBill() {
         $('#totalCost').text(total);
 
         swal({
-            title: "Your order will be delivered to " + areaLocation + " at kshs 100. ",
-            icon: "success",
+            title: "Your order will be delivered to " + areaLocation + " at kshs 100. ",//sweet alert for popping up
         })
 
     } else {
@@ -143,17 +144,7 @@ function checkout() {
 }
 
 $(document).ready(function () {
-    //sidebar nav
-   $('.nav_icon').click(function (){
-       $('.sidebar').toggle();
-   })
-   
-   //hide nav on screen resize
-   $(window). resize(function(){
-       $('.sidebar').hide();
-   })
-   
-    //display location field if delivered
+    //show location if prompted to
     $('.radioBtn').change(function () {
         if (document.getElementById("yes").checked) {
             $('.location').show();
@@ -161,7 +152,7 @@ $(document).ready(function () {
             $('.location').hide();
         }
     });
-
+//proceed button
     $('#Proceed').click(function () {
         var type = $('#type option:selected').val();
         var size = $('#size option:selected').val();
@@ -181,13 +172,13 @@ $(document).ready(function () {
             var quantity = parseInt($('#quantity').val());
             var selectedTopping = parseInt($('#topping option:selected').val());
 
-            //create new object
+            //creates new object
             var newOrder = new McPizza(selectedType, selectedSize, selectedCrust, selectedTopping);
 
-            //price per order
+            //price of neworder
             var pizzaBill = (newOrder.getSize() + newOrder.getCrust() + newOrder.getTopping()) * quantity;
 
-            //Table display of the order inputted
+            //the table should show this
             $(".table tbody:last").append("<tr>" +
                 "<td>" + $('#type option:selected').text() + "</td>" +
                 "<td>" + $('#crust option:selected').text() + "</td>" +
