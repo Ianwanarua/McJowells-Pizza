@@ -18,7 +18,7 @@ I used the following technologies;
 - Jquery
 ## Support and contact details
 You can reach me through ian.wanarua@student.moringaschool.com
-### [Live demo](/)
+### [Live demo](https://ianwanarua.github.io/McJowells-Pizza//)
 ### License
 This project is under this [MIT](LICENSE) <br>
 (c) 2021 **McJowells-Pizza**
