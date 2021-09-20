@@ -1,5 +1,8 @@
-//business logic
-function Order(type, size, crust, topping) {
+let type;
+let crust;
+let topping;
+
+function McPizza(type, size, crust, topping) {
     this.type = type;
     this.size = size;
     this.crust = crust;
@@ -7,7 +10,7 @@ function Order(type, size, crust, topping) {
 }
 
 //get crust price
-Order.prototype.getCrust = function () {
+McPizza.prototype.getCrust = function () {
     if (this.crust === 0) {
         return 50
     } else if (this.crust === 1) {
@@ -18,7 +21,8 @@ Order.prototype.getCrust = function () {
 }
 
 //get topping price
-Order.prototype.getTopping = function () {
+McPizza.prototype.getTopping = function () {
+    var count = $("#topping :selected").length;
     if (this.topping === 0) {
         return 50
     } else if (this.topping === 1) {
@@ -35,60 +39,60 @@ Order.prototype.getTopping = function () {
 
 
 //get size price
-Order.prototype.getSize = function () {
+McPizza.prototype.getSize = function () {
 
-    var count = $("#topping :selected").length;
-    //small pizza 350
+   var count = $("#topping :selected").length;
+    //
     if (this.type == 0) {
-        if (count === 0) {
+        if (this.size === 0) {
             return 400
         }
-         else if (count === 1)
+         else if (this.size === 1)
             return 450
         else {
             return 550
         }
     }
    else if (this.type == 1) {
-        if (count === 0) {
+        if (this.size === 0) {
             return 700
-        } else if (count === 1)
+        } else if (this.size === 1)
             return 800
         else {
             return 1500
         }
     } 
     else if (this.type == 2) {
-        if (count === 0) {
+        if (this.size === 0) {
             return 800
-        } else if (count === 1)
+        } else if (this.size === 1)
             return 1000
         else {
             return 1800
         }
     } 
     else if (this.type == 3) {
-        if (count === 0) {
+        if (this.size === 0) {
             return 900
-        } else if (count === 1)
+        } else if (this.size === 1)
             return 1500
         else {
             return 2000
         }
     }
     else if (this.type == 4) {
-        if (count === 0) {
+        if (this.size === 0) {
             return 500
-        } else if (count === 1)
+        } else if (this.size === 1)
             return 950
         else {
             return 2500
         }
     } 
     else if (this.type == 5) {
-        if (count === 0) {
+        if (this.size === 0) {
             return 400
-        } else if (count === 1)
+        } else if (this.size === 1)
             return 1000
         else {
             return 2400
@@ -164,7 +168,6 @@ $(document).ready(function () {
         var crust = $('#crust option:selected').val();
         var quantity = $('#quantity').val();
         var topping = $('#topping option:selected').val();
-        var name = $('#name').val();
 
         //validate fields
         if (type == '' || size == '' || crust == '' || topping == '' || quantity ==  '') {
@@ -179,7 +182,7 @@ $(document).ready(function () {
             var selectedTopping = parseInt($('#topping option:selected').val());
 
             //create new object
-            var newOrder = new Order(selectedType, selectedSize, selectedCrust, selectedTopping);
+            var newOrder = new McPizza(selectedType, selectedSize, selectedCrust, selectedTopping);
 
             //price per order
             var pizzaBill = (newOrder.getSize() + newOrder.getCrust() + newOrder.getTopping()) * quantity;
