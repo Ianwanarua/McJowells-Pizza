@@ -102,7 +102,7 @@ Order.prototype.getSize = function () {
 //user Interface
 //calculate total cost 
 function fullBill() {
-    var areaLocation = document.getElementById("location").value;
+    var areaLocation = document.getElementById("myArea").value;
         var add = 0;
     $(".total_pizza").each(function () {
         var value = $(this).text();
@@ -185,7 +185,7 @@ $(document).ready(function () {
             var pizzaBill = (newOrder.getSize() + newOrder.getCrust() + newOrder.getTopping()) * quantity;
 
             //append data to table
-            $('.displayOrder').show();
+            $('.form_table').show();
             $(".table tbody:last").append("<tr>" +
                 "<td>" + $('#type option:selected').text() + "</td>" +
                 "<td>" + $('#crust option:selected').text() + "</td>" +
