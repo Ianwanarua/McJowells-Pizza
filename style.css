@@ -218,7 +218,7 @@ footer{
 
 }
 .socials a:hover i{
-    transform: translateY(-20px);
+    color: rgb(9, 102, 145);
 }
 
 .footer-bottom{
