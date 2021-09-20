@@ -102,8 +102,8 @@ Order.prototype.getSize = function () {
 //user Interface
 //calculate total cost 
 function fullBill() {
-    var areaLocation = $('#location').text;
-    var add = 0;
+    var areaLocation = document.getElementById("location").value;
+        var add = 0;
     $(".total_pizza").each(function () {
         var value = $(this).text();
         if (!isNaN(value) && value.length != 0) {
