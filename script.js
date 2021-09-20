@@ -158,7 +158,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#addToCart').click(function () {
+    $('#Proceed').click(function () {
         var type = $('#type option:selected').val();
         var size = $('#size option:selected').val();
         var crust = $('#crust option:selected').val();
@@ -169,7 +169,7 @@ $(document).ready(function () {
         //validate fields
         if (type == '' || size == '' || crust == '' || topping == '' || quantity ==  '') {
             alert('Please make a complete order first')
-        } else if (document.getElementById("yes").checked && $('#location').val() == '') {
+        } else if (document.getElementById("yes").checked && $('#myArea').val() == '') {
             alert('Please fill out your location')
         } else {
             var selectedType = parseInt($('#type option:selected').val());
