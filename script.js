@@ -171,7 +171,7 @@ $(document).ready(function () {
 
         //validate fields
         if (type == '' || size == '' || crust == '' || topping == '' || quantity ==  '') {
-            alert('Please make a complete order first')
+            alert('Fill in the form completely')
         } else if (document.getElementById("yes").checked && $('#myArea').val() == '') {
             alert('Please fill out your location')
         } else {
