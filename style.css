@@ -95,7 +95,6 @@ body{
     flex-direction: column;
     
 }
-
 .form{
     padding: 4em;
     box-sizing: border-box;
@@ -133,7 +132,7 @@ label {
 
 }
 th {
-  border: 1px solid #dddddd;
+  border: px solid black;
   text-align: left;
   padding: 8px;
 }
@@ -141,14 +140,16 @@ td{
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  color: black;
+  color: white;
+  font-weight: 700;
+  
 }
 
 .btn {
     margin-top: 20px;
 }
 
-#bill {
+#displayTotal {
     height: 30px;
     font-size: X-large;
     font-weight: 700;
