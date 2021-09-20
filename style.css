@@ -8,7 +8,7 @@ body{
 .banner{
 	height: 100vh;
 	width: 100%;
-	background:url('assets/overlay.png'),url('assets/image.jpg');
+	background:url('assets/overlay.png'),url('assets/image.jpg');/*creates an overlay on bg image*/
 	background-position: center 40%;
 	background-size:cover;
 	background-repeat: no-repeat;
@@ -34,7 +34,7 @@ body{
 }
 .banner .info{
 	margin-top:15%;
-	transform: translateY(-15%);
+	transform: translateY(-15%);/*position*/
 }
 .banner .info h1{
 	font-size: 2.5em;
@@ -99,9 +99,6 @@ body{
     padding: 4em;
     box-sizing: border-box;
     margin-top: 20px;
-   /* position: relative;
-    top: 0;
-    right: 0;*/
     width: 100%;
     height: 100%;
     color: white;
@@ -129,7 +126,6 @@ label {
 .location {
     display: none;
     align-items: center;
-
 }
 th {
   border: px solid black;
@@ -148,8 +144,7 @@ td{
 .btn {
     margin-top: 20px;
     background: #e91e63;
-    text-transform: uppercase;
-    
+    text-transform: uppercase; 
 }
 
 #displayTotal {
@@ -164,13 +159,6 @@ td{
 .form2{
   margin-left: 25%;
 }
-
-
-@media screen and (max-width: 767px) {
-    .form2 {
-        margin-left: 0;
-    }
-  }
   /*FOOTER SECTION*/
   #footer-body{
     margin: 0;
@@ -180,13 +168,11 @@ td{
     color: black;
 }
 footer{
-    
     bottom: 0;
     left: 0;
     right: 0;
     background: #111;
     height: auto;
-    
     font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;
