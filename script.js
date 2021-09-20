@@ -173,7 +173,7 @@ $(document).ready(function () {
         if (type == '' || size == '' || crust == '' || topping == '' || quantity ==  '') {
             alert('Fill in the form completely')
         } else if (document.getElementById("yes").checked && $('#myArea').val() == '') {
-            alert('Please fill out your location')
+            alert('Enter location')
         } else {
             var selectedType = parseInt($('#type option:selected').val());
             var selectedSize = parseInt($('#size option:selected').val());
