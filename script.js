@@ -25,18 +25,19 @@ McPizza.prototype.getCrust = function () {
 McPizza.prototype.getTopping = function () {
     var count = $("#topping :selected").length;
     if (this.topping === 0) {
-        return 50
-    } else if (this.topping === 1) {
         return 100
-    } else if (this.topping === 2) {
+    } else if (this.topping === 1) {
         return 150
+    } else if (this.topping === 2) {
+        return 100
     } else if (this.topping === 3) {
-        return 200
+        return 150
     }
     else if (this.topping ===4) {
-        return 250
+        return 200
     }
 }
+
 
 
 //Pizza size price
